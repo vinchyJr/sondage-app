@@ -20,12 +20,12 @@ const items = [
   },
   {
     title: "Créer un sondage",
-    url: "#",
+    url: "/create-survey",
     icon: Inbox,
   },
   {
     title: "Compte",
-    url: "/user",
+    url: "/profile",
     icon: User,
   },
 ]

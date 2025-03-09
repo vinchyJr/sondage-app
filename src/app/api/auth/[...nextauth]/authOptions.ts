@@ -5,6 +5,7 @@ import { connectToDatabase } from "@/lib/mongodb";
 import User from "@/models/User";
 
 const authOptions: NextAuthOptions = {
+  secret: process.env.NEXTAUTH_SECRET, 
   providers: [
     CredentialsProvider({
       name: "Credentials",
@@ -33,7 +34,7 @@ const authOptions: NextAuthOptions = {
     error: "/api/auth/error",
   },
   session: {
-    strategy: "jwt" as const,
+    strategy: "jwt",
   },
   callbacks: {
     async session({ session, token }: { session: Session; token: any }) {
